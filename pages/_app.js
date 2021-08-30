@@ -38,6 +38,12 @@ function MyApp({ Component, pageProps }) {
           site: '@edgar_moreano',
           cardType: 'summary_large_image',
         }}
+        additionalLinkTags={[
+          {
+            property: 'manifest',
+            href: '/manifest.json'
+          }
+        ]}
       />
       <Component {...pageProps} />
     </>

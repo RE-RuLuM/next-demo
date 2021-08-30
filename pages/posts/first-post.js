@@ -41,6 +41,12 @@ export default function FirstPost() {
           site: '@edgar_moreano',
           cardType: 'summary_large_image',
         }}
+        additionalLinkTags={[
+          {
+            property: 'manifest',
+            href: '/manifest.json'
+          }
+        ]}
       />
         <h1>First Post</h1>
         <h2>

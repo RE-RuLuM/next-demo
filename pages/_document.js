@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -11,11 +12,41 @@ class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
             <title>Next js</title>
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content="@Edgar" />
-            <meta name="twitter:title" content="prueba next" />
-            <meta name="twitter:description" content="etiqueta de descripcion" />
-            <meta name="twitter:image" content="https://placeimg.com/640/480/any" />
+            <NextSeo 
+              title="Mi aplicación Next"
+              description="Una descripcion de"
+              openGraph={{
+                url: 'https://demo-next-test.netlify.app/',
+                title: 'Mi aplicación Next',
+                description: 'Mi descripción',
+                images: [
+                  {
+                    url: 'https://placeimg.com/1200/630/any',
+                    width: 1200,
+                    height: 600,
+                    alt: 'dummy image'
+                  },
+                  {
+                    url: 'https://placeimg.com/600/300/any',
+                    width: 600,
+                    height: 300,
+                    alt: 'dummy image 2'
+                  },
+                  {
+                    url: 'https://placeimg.com/400/400/any',
+                    width: 400,
+                    height: 400,
+                    alt: 'dummy image 3'
+                  },
+                ],
+                site_name: 'Mi aplicación Next'
+              }}
+              twitter={{
+                handle: '@edgar',
+                site: '@edgar_moreano',
+                cardType: 'summary_large_image',
+              }}
+            />
             <script dangerouslySetInnerHTML={{
                     __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

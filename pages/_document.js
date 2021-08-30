@@ -11,6 +11,11 @@ class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
             <title>Next js</title>
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@Edgar" />
+            <meta name="twitter:title" content="prueba next" />
+            <meta name="twitter:description" content="etiqueta de descripcion" />
+            <meta name="twitter:image" content="https://placeimg.com/640/480/any" />
             <script dangerouslySetInnerHTML={{
                     __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
